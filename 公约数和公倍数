@@ -1,0 +1,29 @@
+#define _CRT_SECURE_NO_WARNINGS 1
+#include<stdio.h>
+int GCD(int a, int b)//最大公约数 
+{
+	int r;
+	while (b != 0)
+	{
+		r = a % b;
+		a = b;
+		b = r;
+	}
+	return a;
+}
+int LCM(int a, int b)//最小公倍数 
+{
+	int d;
+	d = GCD(a, b);
+	return a * b / d;
+}
+int main()
+{
+	int a, b, c, d;
+	printf("input(a,b):");
+	scanf("%d,%d", &a, &b);
+	c = GCD(a, b);
+	d = LCM(a, b);
+	printf("GCD=%d LCM=%d", c, d);
+	return 0;
+}
