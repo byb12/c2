@@ -3,7 +3,7 @@
 int GCD(int a, int b)//最大公约数 
 {
 	int r;
-	while (b != 0)
+	while (b != 0)//辗转相除法
 	{
 		r = a % b;
 		a = b;
