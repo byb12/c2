@@ -8,14 +8,14 @@ int is_prime(int*pa)
 	{
 		if (*pa == 2 || *pa == 1)
 		{
-			break;
+			return 1;
 		}
 		else if (*pa % i == 0)
 		{
-			break;
+			return 0;
 		}
 	}
-		 if(i> sqrt(*pa)|| *pa == 2 || *pa == 1)
+		 if(i> sqrt(*pa))
 		{
 			 return 1;
 		}
