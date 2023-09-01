@@ -36,3 +36,24 @@ int main()
 	printf("len=%d", len);
 	return 0;
 }
+//指针
+#define _CRT_SECURE_NO_WARNINGS 1
+#include<stdio.h>
+int my_strlen(char* star)
+{
+	char* start=star;
+	char* end=star;
+	while (*end != '\0')
+	{
+		end++;
+	}
+	return end - start;
+}
+int main()
+{
+	char arr[] = "bbt";
+	int z=my_strlen(arr);
+	printf("%d\n", z);
+	
+	return 0;
+}
