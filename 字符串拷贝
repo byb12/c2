@@ -36,3 +36,26 @@ int main()
 	printf("%s\n", arr1);
 	return 0;
 }
+//再次优化
+#define _CRT_SECURE_NO_WARNINGS 1
+#include<stdio.h>
+#include<assert.h>
+char* my_strcpy(char* dest, const char* src)//const 修饰*stc不可被改变
+{
+	char* ret = dest;
+	assert(src != NULL);//断言
+	assert(dest != NULL);//断言
+	while (*dest++ = *src++)
+	{
+		;
+	}
+	return ret;
+}
+int main()
+{
+	char arr1[] = "###############";
+	char arr2[] = "haha";
+	
+	printf("%s\n", my_strcpy(arr1, arr2));
+	return 0;
+}
