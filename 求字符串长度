@@ -57,3 +57,25 @@ int main()
 	
 	return 0;
 }
+//优化
+#define _CRT_SECURE_NO_WARNINGS 1
+#include<stdio.h>
+#include<assert.h>
+int my_strlen(const char* star)//star不可被改变
+{
+	assert(*star != NULL);//保证指针的有效性
+	char* start = star;
+	char* end = star;
+	while (*end != '\0')
+	{
+		end++;
+	}
+	return end - start;
+}
+int main()
+{
+	char arr[] = "bbt";
+	printf("%d\n", my_strlen(arr));
+
+	return 0;
+}
